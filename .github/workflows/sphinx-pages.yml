@@ -1,8 +1,8 @@
-name: Docs: Sphinx → GitHub Pages
+name: Build and Deploy Sphinx Docs
 
 on:
   push:
-    branches: [ main ]    # change if your default branch differs
+    branches: [ main ]
   workflow_dispatch:
 
 permissions:
@@ -11,7 +11,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: pages
   cancel-in-progress: true
 
 jobs:
