@@ -8,3 +8,4 @@ This page is written in **Markdown**.
 
 ```python
 print("code fences work too")
+```
