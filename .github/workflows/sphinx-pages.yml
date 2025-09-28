@@ -17,6 +17,9 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash -l {0}    # login shell so conda activation works
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -32,8 +35,13 @@ jobs:
           auto-activate-base: false
           python-version: 3.12
 
-      - name: Build HTML
-        run: sphinx-build -b html docs/source docs/build/html
+      - name: Sanity check env
+        run: |
+          conda info --envs
+          python -V
+
+      - name: Build HTML with make
+        run: make -C docs html
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
