@@ -49,16 +49,7 @@ Leaky relu, however maintains a faint but present gradient signal in the negativ
 
 ### a)
 
-```{math}
-E = mc^2
 
-y = (2)x_1 + (-1)x_2 + 3
-
-
-
-```
-
-<!-- ```{admonition} Solution -->
 **Model:**
 
 ŷ = w1·x1 + w2·x2 + w0  
