@@ -51,7 +51,57 @@ Leaky relu, however maintains a faint but present gradient signal in the negativ
 
 ```{math}
 E = mc^2
+
+y = (2)x_1 + (-1)x_2 + 3
+
+
+
 ```
+
+```{admonition} Solution
+**Model:**
+
+ŷ = w1·x1 + w2·x2 + w0  
+
+Parameters: w1 = 2, w2 = -1, w0 = 3
+
+---
+
+**Samples:**
+
+| Sample | x1 | x2 | True y |
+|--------|----|----|---------|
+| 1      | 1  | 2  | 4       |
+| 2      | 2  | 1  | 3       |
+| 3      | 0  | 3  | 1       |
+
+---
+
+**Step 1: Predictions**
+
+- ŷ1 = 2(1) + (-1)(2) + 3 = 3  
+- ŷ2 = 2(2) + (-1)(1) + 3 = 6  
+- ŷ3 = 2(0) + (-1)(3) + 3 = 0  
+
+---
+
+**Step 2: Squared Errors**
+
+- (ŷ1 - y1)² = (3 - 4)² = 1  
+- (ŷ2 - y2)² = (6 - 3)² = 9  
+- (ŷ3 - y3)² = (0 - 1)² = 1  
+
+---
+
+**Step 3: Mean Squared Error**
+
+MSE = (1 + 9 + 1) / 3 = 11/3 ≈ 3.67  
+
+---
+
+**Final Answer:**  
+MSE = 11/3 ≈ 3.67
+
 
 ### b)
 
