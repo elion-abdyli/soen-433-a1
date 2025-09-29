@@ -18,6 +18,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      PYTHONPATH: ${{ github.workspace }}/src
     defaults:
       run:
         shell: bash -l {0}
@@ -26,10 +28,10 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Configure GitHub Pages
-        uses: actions/configure-pages@v5   # current major :contentReference[oaicite:1]{index=1}
+        uses: actions/configure-pages@v5
 
       - name: Setup Miniconda from environment.yml
-        uses: conda-incubator/setup-miniconda@v3   # current major as of 2025-09 :contentReference[oaicite:2]{index=2}
+        uses: conda-incubator/setup-miniconda@v3
         with:
           activate-environment: docs
           environment-file: environment.yml
@@ -43,7 +45,7 @@ jobs:
         run: make -C docs html
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4  # recommended for Pages :contentReference[oaicite:3]{index=3}
+        uses: actions/upload-pages-artifact@v4
         with:
           path: docs/build/html
 

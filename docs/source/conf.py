@@ -4,8 +4,9 @@ release = ""                 # or "0.1.0" if you want a version shown
 html_title = "soen-433-a1 documentation"
 
 extensions = [
-    "myst_parser",           # enable Markdown support
-    # add more later if you want (e.g., "sphinx.ext.autodoc", "sphinx.ext.napoleon")
+    "myst_parser",          # Markdown
+    "sphinx.ext.autodoc",   # pull docstrings
+    "sphinx.ext.napoleon",  # Google/NumPy docstrings
 ]
 
 # optional but nice: make .md work explicitly and enable a few MyST extras
@@ -16,3 +17,5 @@ templates_path = ["_templates"]
 exclude_patterns = []
 html_theme = "furo"
 html_static_path = ["_static"]
+
+autodoc_default_options = {"members": True, "undoc-members": False, "show-inheritance": True}

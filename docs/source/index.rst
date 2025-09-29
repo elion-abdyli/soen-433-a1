@@ -17,4 +17,5 @@ documentation for details.
    
    getting-started
    does-markdown-work
+   api/index
 
