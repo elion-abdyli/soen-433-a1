@@ -49,6 +49,10 @@ Leaky relu, however maintains a faint but present gradient signal in the negativ
 
 ### a)
 
+```{math}
+E = mc^2
+```
+
 ### b)
 
 ## Question 4
