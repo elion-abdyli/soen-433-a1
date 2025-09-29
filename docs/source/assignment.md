@@ -105,6 +105,37 @@ MSE = 11/3 ≈ 3.67
 
 ### b)
 
+**Initial weights:**  
+w1 = 2, w2 = -1, w0 = 3  
+Learning rate: η = 0.1  
+
+---
+
+**Sample 1: (x1=1, x2=2, y=4)**  
+ŷ = 3, error = -1  
+∂w1 = -1, ∂w2 = -2, ∂w0 = -1  
+Updated: w1 = 2.1, w2 = -0.8, w0 = 3.1  
+
+---
+
+**Sample 2: (x1=2, x2=1, y=3)**  
+ŷ = 6.5, error = 3.5  
+∂w1 = 7, ∂w2 = 3.5, ∂w0 = 3.5  
+Updated: w1 = 1.4, w2 = -1.15, w0 = 2.75  
+
+---
+
+**Sample 3: (x1=0, x2=3, y=1)**  
+ŷ = -0.7, error = -1.7  
+∂w1 = 0, ∂w2 = -5.1, ∂w0 = -1.7  
+Updated: w1 = 1.4, w2 = -0.64, w0 = 2.92  
+
+---
+
+**Final weights after one epoch:**  
+w1 = 1.4, w2 = -0.64, w0 = 2.92  
+
+
 ## Question 4
 
 ### a)
