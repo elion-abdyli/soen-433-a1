@@ -167,11 +167,11 @@ Loss₅ = -log(0.50) ≈ 0.693
 
 Rule: pick the class with the highest predicted probability.
 
-- Sample 1: [0.70, 0.20, 0.10] → Predict Positive → Correct ✅  
-- Sample 2: [0.10, 0.80, 0.10] → Predict Negative → Correct ✅  
-- Sample 3: [0.30, 0.40, 0.30] → Predict Negative → True = Neutral → Incorrect ❌  
-- Sample 4: [0.60, 0.25, 0.15] → Predict Positive → Correct ✅  
-- Sample 5: [0.20, 0.30, 0.50] → Predict Neutral → Correct ✅  
+- Sample 1: [0.70, 0.20, 0.10] -> Predict Positive -> Correct
+- Sample 2: [0.10, 0.80, 0.10] -> Predict Negative -> Correct 
+- Sample 3: [0.30, 0.40, 0.30] -> Predict Negative -> True = Neutral -> Incorrect  
+- Sample 4: [0.60, 0.25, 0.15] -> Predict Positive -> Correct 
+- Sample 5: [0.20, 0.30, 0.50] -> Predict Neutral -> Correct  
 
 Correct = 4 out of 5  
 
