@@ -38,6 +38,9 @@ jobs:
           auto-activate-base: false
           python-version: 3.12
 
+      - name: Install TeX Live for PDF build
+        run: sudo apt-get update && sudo apt-get install -y texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended latexmk
+
       - name: Sanity check env
         run: python -c "import sphinx, myst_parser; print('sphinx/myst OK')"
 
@@ -47,10 +50,19 @@ jobs:
       - name: Build HTML with make
         run: make -C docs html
 
-      - name: Upload artifact
+      - name: Build PDF with make
+        run: make -C docs latexpdf
+
+      - name: Upload HTML artifact
         uses: actions/upload-pages-artifact@v4
         with:
           path: docs/build/html
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: sphinx-pdf
+          path: docs/build/latex/*.pdf
 
   deploy:
     environment:
