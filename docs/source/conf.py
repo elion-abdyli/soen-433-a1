@@ -1,28 +1,18 @@
-# Configuration file for the Sphinx documentation builder.
-#
-# For the full list of built-in configuration values, see the documentation:
-# https://www.sphinx-doc.org/en/master/usage/configuration.html
+project = "soen-433-a1"
+author = "elion"
+release = ""                 # or "0.1.0" if you want a version shown
+html_title = "soen-433-a1 documentation"
 
-# -- Project information -----------------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
+extensions = [
+    "myst_parser",           # enable Markdown support
+    # add more later if you want (e.g., "sphinx.ext.autodoc", "sphinx.ext.napoleon")
+]
 
-project = 'soen-433-a1'
-copyright = '2025, elion'
-author = 'elion'
-release = '0'
+# optional but nice: make .md work explicitly and enable a few MyST extras
+source_suffix = {".rst": "restructuredtext", ".md": "markdown"}
+myst_enable_extensions = ["colon_fence", "deflist", "attrs"]
 
-# -- General configuration ---------------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
-
-extensions = []
-
-templates_path = ['_templates']
+templates_path = ["_templates"]
 exclude_patterns = []
-
-
-
-# -- Options for HTML output -------------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
-
-html_theme = 'furo'
-html_static_path = ['_static']
+html_theme = "furo"
+html_static_path = ["_static"]
