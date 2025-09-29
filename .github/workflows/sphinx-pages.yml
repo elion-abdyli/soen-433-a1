@@ -41,6 +41,9 @@ jobs:
       - name: Sanity check env
         run: python -c "import sphinx, myst_parser; print('sphinx/myst OK')"
 
+      - name: Generate API stubs
+        run: sphinx-apidoc -f -e -o docs/source/api src
+
       - name: Build HTML with make
         run: make -C docs html
 
