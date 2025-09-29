@@ -15,7 +15,9 @@ documentation for details.
    :maxdepth: 2
    :caption: Contents:
    
+
    getting-started
    does-markdown-work
+   assignment
    api/modules
 
