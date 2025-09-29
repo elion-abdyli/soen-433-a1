@@ -58,7 +58,7 @@ y = (2)x_1 + (-1)x_2 + 3
 
 ```
 
-```{admonition} Solution
+<!-- ```{admonition} Solution -->
 **Model:**
 
 ŷ = w1·x1 + w2·x2 + w0  
