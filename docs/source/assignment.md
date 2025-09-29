@@ -138,6 +138,59 @@ w1 = 1.4, w2 = -0.64, w0 = 2.92
 
 ## Question 4
 
+**Question 4(a): Categorical Cross-Entropy Loss**
+
+Formula:  
+Loss = - (1/N) Σ log(p_correct_class)
+
+where p_correct_class = predicted probability for the true label.
+
+---
+
+**Sample 1** (True = Positive, p = 0.70)  
+Loss₁ = -log(0.70) ≈ 0.357  
+
+**Sample 2** (True = Negative, p = 0.80)  
+Loss₂ = -log(0.80) ≈ 0.223  
+
+**Sample 3** (True = Neutral, p = 0.30)  
+Loss₃ = -log(0.30) ≈ 1.204  
+
+**Sample 4** (True = Positive, p = 0.60)  
+Loss₄ = -log(0.60) ≈ 0.511  
+
+**Sample 5** (True = Neutral, p = 0.50)  
+Loss₅ = -log(0.50) ≈ 0.693  
+
+---
+
+**Total Loss** = (0.357 + 0.223 + 1.204 + 0.511 + 0.693) / 5  
+= 2.988 / 5  
+= 0.598  
+
+**Final Answer (a):** Average Cross-Entropy Loss ≈ **0.598**
+
+---
+
+**Question 4(b): Classification Accuracy**
+
+Rule: pick the class with the highest predicted probability.
+
+- Sample 1: [0.70, 0.20, 0.10] → Predict Positive → Correct ✅  
+- Sample 2: [0.10, 0.80, 0.10] → Predict Negative → Correct ✅  
+- Sample 3: [0.30, 0.40, 0.30] → Predict Negative → True = Neutral → Incorrect ❌  
+- Sample 4: [0.60, 0.25, 0.15] → Predict Positive → Correct ✅  
+- Sample 5: [0.20, 0.30, 0.50] → Predict Neutral → Correct ✅  
+
+Correct = 4 out of 5  
+
+Accuracy = 4/5 = 0.8 = **80%**
+
+---
+
+**Final Answer (b):** Classification Accuracy = **80%**
+
+
 ### a)
 
 ### b)
